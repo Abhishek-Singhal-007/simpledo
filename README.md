@@ -1,4 +1,4 @@
-# my_test_app
+# SimpleDo
 
 A new Flutter project.
 
