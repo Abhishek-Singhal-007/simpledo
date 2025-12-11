@@ -5,6 +5,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
 import 'models/task_model.dart';
+import 'models/subtask_model.dart';
 import 'screens/home_screen.dart';
 import 'theme/theme_provider.dart';
 
@@ -25,6 +26,7 @@ void main() async {
 
   final keyBytes = base64Url.decode(savedKey);
 
+  Hive.registerAdapter(SubTaskAdapter());
   Hive.registerAdapter(TaskModelAdapter());
 
   await Hive.openBox<TaskModel>(
